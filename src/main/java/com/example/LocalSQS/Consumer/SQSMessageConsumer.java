@@ -49,7 +49,7 @@ public class SQSMessageConsumer {
         for (Message message : messages) {
             System.out.println("Received message: " + message.getBody());
             String superheroName = message.getBody();
-            Optional<Superhero> superheroOptional = superheroRepository.findById(superheroName);
+            Optional<Superhero> superheroOptional = superheroRepository.findByName(superheroName);
             if (superheroOptional.isPresent()) {
                 System.out.println("Superhero found: " + message.getBody());
                 Superhero superhero = superheroOptional.get();
