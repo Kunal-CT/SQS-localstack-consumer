@@ -19,7 +19,7 @@ public class SQSController {
 
     @GetMapping("/sendMessage")
     public String sendMessage() {
-        sqsService.sendMessage("Hello, LocalStack SQS!");
+        sqsService.sendMessage("6798add24808268887f2730d");
         return "Message sent!";
     }
 
